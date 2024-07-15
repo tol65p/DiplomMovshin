@@ -14,8 +14,14 @@
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/migrations/0004_resultdetail.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/migrations/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Diplom/static/Diplom/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/EnterResults.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/RegEvent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/WiewResults.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/entry.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/runner.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/tests.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/urls.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/views.py" afterDir="false" />
@@ -33,6 +39,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/mysite" />
   </component>
@@ -45,13 +58,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Diplom" />

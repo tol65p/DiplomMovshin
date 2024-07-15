@@ -1,0 +1,22 @@
+nav {
+    width:1200px;
+    margin: 0 auto;
+}
+nav ul {
+    margin:0;
+    padding:0;
+    height:50px;
+    list-style:none;
+}
+nav ul li {
+    float:left
+}
+nav ul li a {
+    /*color:#fff;*/
+    display:block;
+    height:50px;
+    line-height:50px;
+    padding: 0 30px;
+    text-decoration:none;
+}
+a:hover { color:#d34d43 }

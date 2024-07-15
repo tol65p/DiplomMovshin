@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>Дипломная работа Мовшина А. И.</title>
+    <link rel="stylesheet" href="{% static 'Diplom/index.css' %}">
 </head>
 <body>
     <h1>Соревнования по бегу</h1>
+    <nav>
+        <ul>
+            <li><a href="reg">Регистрация на сайте</a></li>
+            <li><a href="entry">Вход на сайт</a></li>
+            <li><a href="runner">Информация об участнике</a></li>
+            <li><a href="RegEvent">Регистрация на соревнование</a></li>
+            <li><a href="WiewResults">Просмотр результатов</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
