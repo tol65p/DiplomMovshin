@@ -6,5 +6,10 @@
 </head>
 <body>
     <h2>Зарегистрируйтесь на данном сайте беговых соревнований</h2>
+    <form action="{% url 'Diplom:reg' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">Зарегистрироваться</button>
+    </form>
 </body>
 </html>

@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/admin.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Diplom/forms.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/migrations/0001_initial.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/migrations/0002_protokols.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/migrations/0003_alter_protokols_finresult.py" afterDir="false" />
@@ -43,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
