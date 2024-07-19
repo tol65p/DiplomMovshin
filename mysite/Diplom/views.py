@@ -1,27 +1,44 @@
 from django.shortcuts import render, redirect
 from . models import Users
-from . forms import UsersForm
+from . forms import UserForm, EntryForm
 
+current_user = 'zero'
 # Create your views here.
 def index(request):
-    return render(request, 'Diplom/index.html')
+    context = {'current_user': current_user}
+    return render(request, 'Diplom/index.html', context=context)
 
 def reg(request):
+    global current_user
     if request.method != 'POST':
-        form = UsersForm()
+        form = UserForm()
     else:
-        form = UsersForm(request.POST)
+        form = UserForm(request.POST)
         if form.is_valid():
             form.save()
+            current_user = form.cleaned_data['nickname']
             return redirect('Diplom:runner')
     context = {'form': form}
     return render(request, 'Diplom/reg.html', context=context)
 
 def entry(request):
-    return render(request, 'Diplom/entry.html')
+    global current_user
+    if request.method != 'POST':
+        form = EntryForm()
+    else:
+        form = EntryForm(request.POST)
+        if form.is_valid():
+            current_user = form.cleaned_data['nickname']
+            return redirect('Diplom:index')
+    context = {'form': form}
+    return render(request, 'Diplom/entry.html', context=context)
 
 def runner(request):
-    return render(request, 'Diplom/runner.html')
+    context = {'current_user': current_user}
+    return render(request, 'Diplom/runner.html', context=context)
+
+def event(request):
+    return render(request, 'Diplom/event.html')
 
 def RegEvent(request):
     return render(request, 'Diplom/RegEvent.html')

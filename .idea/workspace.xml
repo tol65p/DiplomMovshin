@@ -20,6 +20,7 @@
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/RegEvent.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/WiewResults.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/entry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/event.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/reg.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mysite/Diplom/templates/Diplom/runner.html" afterDir="false" />
@@ -43,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -60,14 +61,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Diplom" />

@@ -2,7 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from . models import Users
 
-class UsersForm(forms.ModelForm):
+class UserForm(forms.ModelForm):
     class Meta:
         model = Users
         fields = ['nickname', 'password', 'email']
@@ -25,3 +25,18 @@ class UsersForm(forms.ModelForm):
         if Users.objects.filter(nickname=username).exists():
             raise ValidationError("такой Ник вже є !")
         return username
+
+class EntryForm(forms.ModelForm):
+    class Meta:
+        model = Users
+        fields = ['nickname', 'password']
+
+    def clean(self):
+        form_data = self.cleaned_data
+        rec = Users.objects.filter(nickname=form_data['nickname'])
+        if rec.exists():
+            if rec[0].password != form_data['password']:
+                raise ValidationError("пароль не соответствует НИК'у !")
+        else:
+            raise ValidationError("Такого НИК не зарегистрировано !")
+        return form_data

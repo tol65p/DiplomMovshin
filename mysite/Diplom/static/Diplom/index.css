@@ -1,5 +1,5 @@
 nav {
-    width:1100px;
+    width:730px;
     margin: 0 auto;
     background:#dddddd;
 }
@@ -24,7 +24,7 @@ a:hover { color:#d34d43 }
 
 h5 {margin: 40px 670px;}
 div {
-    width:195px;
+    width:415px;
     margin: -35px auto;
     background:#dddddd;
 }
@@ -33,6 +33,9 @@ div ul {
     padding:0;
     height:40px;
     list-style:none;
+}
+div ul li {
+    float:left
 }
 div ul li a {
     color:#ff7700;

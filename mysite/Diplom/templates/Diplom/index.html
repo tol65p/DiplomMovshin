@@ -10,18 +10,24 @@
     <h1>Соревнования по бегу</h1>
     <nav>
         <ul>
+            {% if current_user == "zero" %}
             <li><a href="reg">Регистрация на сайте</a></li>
             <li><a href="entry">Вход на сайт</a></li>
+            {% else %}
             <li><a href="runner">Информация об участнике</a></li>
             <li><a href="RegEvent">Регистрация на соревнование</a></li>
             <li><a href="WiewResults">Просмотр результатов</a></li>
+            {% endif %}
         </ul>
     </nav>
+    {% if current_user == "admin" %}
     <h5>только для Администратора:</h5>
     <div>
         <ul>
+            <li><a href="event">Ввод инф. о соревновании</a></li>
             <li><a href="EnterResults">Внесение результатов</a></li>
         </ul>
     </div>
+    {% endif %}
 </body>
 </html>
