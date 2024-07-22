@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from . models import Users
+from . models import Users, Runners
 
 class UserForm(forms.ModelForm):
     class Meta:
@@ -40,3 +40,8 @@ class EntryForm(forms.ModelForm):
         else:
             raise ValidationError("Такого НИК не зарегистрировано !")
         return form_data
+
+class RunnerForm(forms.ModelForm):
+    class Meta:
+        model = Runners
+        fields = ['fam', 'name', 'gender', 'birthday', 'city', 'tel', 'sportTeam', 'identKod']

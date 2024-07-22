@@ -8,5 +8,6 @@ urlpatterns = [path('', views.index, name='index'),
                path('event', views.event, name='event'),
                path('RegEvent', views.RegEvent, name='RegEvent'),
                path('EnterResults', views.EnterResults, name='EnterResults'),
-               path('WiewResults', views.WiewResults, name='WiewResults')
+               path('WiewResults', views.WiewResults, name='WiewResults'),
+               path('exit', views.exit, name='exit')
               ]
