@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from . models import Users, Runners
-from . forms import UserForm, EntryForm, RunnerForm
+from . models import Users, Runners, Protokols, AgeCategory
+from . forms import UserForm, EntryForm, RunnerForm, ProtokolForm
+from datetime import date
 
 current_user = 'zero'
 current_user_rec = None
@@ -65,7 +66,29 @@ def event(request):
     return render(request, 'Diplom/event.html')
 
 def RegEvent(request):
-    return render(request, 'Diplom/RegEvent.html')
+    if Runners.objects.filter(user=current_user_rec).exists():
+        runner_rec = Runners.objects.get(user=current_user_rec)
+        if request.method != 'POST':
+            form = ProtokolForm()
+        else:
+            form = ProtokolForm(request.POST)
+            if form.is_valid():
+                runner_event = form.save(commit=False)
+                runner_event.runner = runner_rec
+                spisCategory = AgeCategory.objects.filter(event=runner_event.event)
+                age_year = date.today().year - runner_rec.birthday.year
+                for category in spisCategory:
+                    if age_year < category.age_do:
+                        runner_event.category = category
+                        break
+                runner_event.finresult = '00:00:00'
+                runner_event.save()
+                return redirect('Diplom:index')
+        runner = runner_rec.fam + '  ' + runner_rec.name
+        context = {'runner': runner, 'form': form}
+        return render(request, 'Diplom/RegEvent.html', context=context)
+    else:
+        return redirect('Diplom:runner')
 
 def EnterResults(request):
     return render(request, 'Diplom/EnterResults.html')

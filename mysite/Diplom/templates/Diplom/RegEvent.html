@@ -5,6 +5,11 @@
     <title>Рег. на пробег</title>
 </head>
 <body>
-    <h2>Регистрация на пробег</h2>
+    <h2>Регистрация на пробег {{ runner }}</h2>
+    <form action="{% url 'Diplom:RegEvent' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">Зарегистрироваться</button>
+    </form>
 </body>
 </html>

@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from . models import Users, Runners
+from . models import Users, Runners, Protokols
 
 class UserForm(forms.ModelForm):
     class Meta:
@@ -45,3 +45,8 @@ class RunnerForm(forms.ModelForm):
     class Meta:
         model = Runners
         fields = ['fam', 'name', 'gender', 'birthday', 'city', 'tel', 'sportTeam', 'identKod']
+
+class ProtokolForm(forms.ModelForm):
+    class Meta:
+        model = Protokols
+        fields = ['event', 'discount', 'oplata']
