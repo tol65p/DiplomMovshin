@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from . models import Users, Runners, Protokols
-
+from . models import Users, Runners, Protokols, Events
+from datetime import date as dt
 class UserForm(forms.ModelForm):
     class Meta:
         model = Users
@@ -47,6 +47,9 @@ class RunnerForm(forms.ModelForm):
         fields = ['fam', 'name', 'gender', 'birthday', 'city', 'tel', 'sportTeam', 'identKod']
 
 class ProtokolForm(forms.ModelForm):
+    #spisEvent = Events.objects.filter(date__gt=dt.today())
+    #event = forms.ChoiceField(choices=spisEvent)
     class Meta:
         model = Protokols
         fields = ['event', 'discount', 'oplata']
+

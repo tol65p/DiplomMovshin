@@ -75,7 +75,7 @@ def RegEvent(request):
             if form.is_valid():
                 runner_event = form.save(commit=False)
                 runner_event.runner = runner_rec
-                spisCategory = AgeCategory.objects.filter(event=runner_event.event)
+                spisCategory = AgeCategory.objects.filter(event=runner_event.event).order_by('age_do')
                 age_year = date.today().year - runner_rec.birthday.year
                 for category in spisCategory:
                     if age_year < category.age_do:
