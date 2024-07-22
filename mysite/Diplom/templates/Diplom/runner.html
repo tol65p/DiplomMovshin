@@ -6,5 +6,10 @@
 </head>
 <body>
     <h2>Информацияоб участнике соревнований {{ current_user }}</h2>
+    <form action="{% url 'Diplom:runner' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">Сохранить</button>
+    </form>
 </body>
 </html>
